@@ -131,6 +131,36 @@ export function About() {
                 Engineering Mindset & Real-World Experience
               </h3>
 
+              {/* Profile Photo & Quick Headline Banner */}
+              <div className="flex flex-col sm:flex-row items-center gap-5 p-4 rounded-2xl bg-white/5 border border-white/10 mb-6 group">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden shrink-0 border-2 border-cyan-400/40 shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+                  <img
+                    src="./rajesh.jpg"
+                    alt="Rajesh C"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+                </div>
+                <div className="text-center sm:text-left">
+                  <div className="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                    <h4 className="font-heading font-bold text-white text-base">Rajesh C</h4>
+                    <span className="px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 text-[10px] font-mono border border-cyan-400/30">
+                      GEN AI SPECIALIST
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-300 font-sans">
+                    Customer Service Coordinator at Hapag-Lloyd • Generative AI & Machine Learning Builder
+                  </p>
+                  <div className="flex items-center justify-center sm:justify-start gap-3 mt-2 text-[11px] font-mono text-cyan-400">
+                    <span>⚡ RAG & Embeddings</span>
+                    <span>•</span>
+                    <span>🧠 Neural Networks</span>
+                    <span>•</span>
+                    <span>📊 Analytics</span>
+                  </div>
+                </div>
+              </div>
+
               <div className="space-y-4 text-slate-300 leading-relaxed font-sans text-sm sm:text-base">
                 {personal.detailedBio.map((paragraph, idx) => (
                   <p key={idx} className="text-slate-300">

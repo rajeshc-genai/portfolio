@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, FileDown, Github, Linkedin, Sparkles, Send } from 'lucide-react';
+import { Menu, X, FileDown, Github, Linkedin, Sparkles, Send, Share2 } from 'lucide-react';
 import { PORTFOLIO_CONFIG } from '../../data/portfolioConfig';
+import { ShareModal } from './ShareModal';
 
 export function Navbar() {
   const [activeSection, setActiveSection] = useState('hero');
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isShareOpen, setIsShareOpen] = useState(false);
 
   const { personal, navLinks } = PORTFOLIO_CONFIG;
 
@@ -136,6 +138,16 @@ export function Navbar() {
               <Linkedin className="w-4 h-4" />
             </a>
 
+            {/* Share to LinkedIn / Link Button */}
+            <button
+              onClick={() => setIsShareOpen(true)}
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg text-cyan-300 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 hover:border-cyan-400 transition-all shadow-sm hover:shadow-[0_0_12px_rgba(6,182,212,0.3)]"
+              title="Share portfolio to LinkedIn"
+            >
+              <Share2 className="w-3.5 h-3.5 text-cyan-400" />
+              <span>Share</span>
+            </button>
+
             {/* Resume Button */}
             <a
               href={personal.resumeUrl}
@@ -157,8 +169,16 @@ export function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Header Buttons */}
           <div className="flex md:hidden items-center gap-2">
+            <button
+              onClick={() => setIsShareOpen(true)}
+              className="p-2 text-cyan-300 bg-cyan-500/10 rounded-lg border border-cyan-500/30"
+              aria-label="Share Portfolio"
+            >
+              <Share2 className="w-4 h-4 text-cyan-400" />
+            </button>
+
             <a
               href={personal.resumeUrl}
               download
@@ -245,6 +265,9 @@ export function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Share Modal Dialog */}
+      <ShareModal isOpen={isShareOpen} onClose={() => setIsShareOpen(false)} />
     </header>
   );
 }
