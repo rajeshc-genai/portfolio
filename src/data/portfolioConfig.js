@@ -5,7 +5,7 @@
  * Everything across the site references this central file!
  */
 
-export const GITHUB_USERNAME = "racerrajesh1413-art";
+export const GITHUB_USERNAME = "rajeshc-genai";
 
 export const PORTFOLIO_CONFIG = {
   // Personal Details

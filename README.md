@@ -55,18 +55,9 @@ A modern, high-performance, responsive personal portfolio website built with **R
 All personal details, URLs, placeholder usernames, and project descriptions are centralized in **one single file**:
 📁 `src/data/portfolioConfig.js`
 
-To customize your GitHub username, replace `YOUR-USERNAME`:
+To customize your GitHub username, edit `GITHUB_USERNAME`:
 ```javascript
-export const PORTFOLIO_CONFIG = {
-  personal: {
-    name: "Rajesh C",
-    githubUsername: "YOUR-USERNAME", // <-- Change to your GitHub handle
-    githubUrl: "https://github.com/YOUR-USERNAME",
-    linkedinUrl: "https://www.linkedin.com/in/rajeshc",
-    email: "rajesh7904952116@gmail.com",
-    // ...
-  }
-};
+export const GITHUB_USERNAME = "rajeshc-genai";
 ```
 
 ---
