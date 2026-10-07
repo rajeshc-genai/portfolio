@@ -126,7 +126,7 @@ export const PORTFOLIO_CONFIG = {
           { name: "Data Cleaning & Imputation", level: "Advanced", icon: "Filter" },
           { name: "Pivot & Summary Tables", level: "Advanced", icon: "Grid" },
           { name: "Streamlit UI", level: "Hands-on", icon: "Layout" },
-          { name: "Advanced Microsoft Excel", level: "Expert", icon: "Sheet" },
+          { name: "Microsoft Excel", level: "Hands-on", icon: "Sheet" },
           { name: "Git & Version Control", level: "Proficient", icon: "GitBranch" }
         ]
       }
@@ -237,9 +237,9 @@ export const PORTFOLIO_CONFIG = {
       },
       {
         title: "Microsoft Excel Certification",
-        issuer: "Microsoft Certified / Advanced Specialist",
+        issuer: "Microsoft Excel Certification",
         focus: "Advanced Formulas, Pivot Tables, Data Modelling, Lookup Functions & Reporting Dashboards",
-        badge: "Excel Specialist",
+        badge: "Microsoft Excel Certified",
         verified: true
       }
     ]

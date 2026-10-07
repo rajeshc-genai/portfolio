@@ -145,7 +145,7 @@ export function About() {
                   <div className="flex items-center justify-center sm:justify-start gap-2 mb-1">
                     <h4 className="font-heading font-bold text-white text-base">Rajesh C</h4>
                     <span className="px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 text-[10px] font-mono border border-cyan-400/30">
-                      GEN AI SPECIALIST
+                      ASPIRING AI & ML PROFESSIONAL
                     </span>
                   </div>
                   <p className="text-xs text-slate-300 font-sans">
